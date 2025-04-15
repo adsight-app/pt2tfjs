@@ -1,0 +1,30 @@
+[project]
+name = "emby"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "ai-edge-litert>=1.2.0",
+    "keras>=3.9.2",
+    "onnx>=1.17.0",
+    "onnx-graphsurgeon>=0.5.8",
+    "onnx-simplifier>=0.4.36",
+    "onnx-tf>=1.10.0",
+    "onnx2tf>=1.27.2",
+    "onnxruntime>=1.21.0",
+    "onnxslim>=0.1.50",
+    "protobuf>=3.20.3",
+    "simple-onnx-processing-tools>=1.1.32",
+    "sng4onnx>=1.0.4",
+    "tensorflow>=2.19.0",
+    "tensorflow-estimator==2.1.0",
+    "tensorflow-hub>=0.12.0",
+    "tensorflowjs>=3.18.0",
+    "tf-keras>=2.19.0",
+    "tflite-support>=0.4.4",
+    "ultralytics>=8.3.108",
+]

@@ -1,0 +1,17 @@
+[project]
+name = "onnx2tfjs"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "click>=8.1.8",
+    "keras==2.13.1",
+    "onnx-graphsurgeon>=0.5.8",
+    "onnx-tf>=1.10.0",
+    "onnxruntime>=1.21.0",
+    "onnxsim>=0.4.36",
+    "simple-onnx-processing-tools>=1.1.32",
+    "tensorflow>=2.13.0,<=2.15.0",
+    "tensorflowjs>=4.22.0",
+]
