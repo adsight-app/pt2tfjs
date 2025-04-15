@@ -1,3 +1,5 @@
+# Transcribed https://colab.research.google.com/github/cj-mills/tfjs-yolox-unity-tutorial/blob/main/notebooks/ONNX-to-TF-to-TFJS-Colab.ipynb
+
 import os
 from pathlib import Path
 import onnx
@@ -11,9 +13,7 @@ import click
 @click.argument("onnx_model_path", type=click.Path(exists=True))
 def convert_onnx_to_tfjs(onnx_model_path):
     onnx_model = onnx.load(onnx_model_path)
-    print(f'Input: {onnx_model.graph.input[0]}')
     input_name = onnx_model.graph.input[0].name
-    print(f'Input name: {input_name}')
 
     print('Ordering conversion')
     onnx_model = order_conversion(
@@ -21,9 +21,6 @@ def convert_onnx_to_tfjs(onnx_model_path):
         input_op_names_and_order_dims={f"{input_name}": [0,2,3,1]},
         non_verbose=True
     )    
-
-    print('Updated input')
-    print(onnx_model.graph.input[0])
 
     print('Simplifying ONNX model')
     onnx_model, check = simplify(onnx_model)
